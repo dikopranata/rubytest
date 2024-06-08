@@ -20,6 +20,21 @@ class YourPlayer < BasePlayer
         x -= 1
         y = y
       }
+    elsif (x != grid.size) && (y == grid.size) 
+      {
+        if (x == 0) && (y == grid.size ) {
+          x = 0
+          y = grid.size
+        } else {
+          x -= 1
+          y = grid.size
+        }
+        
+      }
+    elsif (x == 0) && (y == grid.size) {
+      x = 0
+      y -= 1 
+    }
     else
       {
         x += 1
